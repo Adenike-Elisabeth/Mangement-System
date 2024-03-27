@@ -1,0 +1,76 @@
+#server:
+#  port: 4545
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+#  spring:
+#    profiles:
+#      active: qa
+
+---
+
+#spring:
+#  profile: dev
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dcb
+#    username: root
+#    password: Mayowa05@
+#    driver-class-name: com.mysql.jdbc.Driver
+#  show-sql: true
+#welcome:
+#  message: "Welcome AdeNike Elisabeth baby!!!! oh yea"
+
+
+---
+
+
+spring:
+  profile: qa
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/dcbqa
+    username: root
+    password: Mayowa05@
+    driver-class-name: com.mysql.jdbc.Driver
+  show-sql: true
+welcome:
+  message: "Welcome AdeNike Elisabeth baby!!!! oh yea"
+server:
+  port: 2020
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      exclude: "env, beans"
+
+
+
+---
+
+#spring:
+#  profile: prod
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dcb-prod
+#    username: root
+#    password: Mayowa05@
+#    driver-class-name: com.mysql.jdbc.Driver
+#  show-sql: true
+#welcome:
+#  message: "Welcome AdeNike Elisabeth baby!!!! oh yea"
+
+---
